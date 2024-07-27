@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "services/discovery"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
