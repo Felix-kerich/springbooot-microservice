@@ -2,7 +2,7 @@ package com.ecommerce.product;
 
 import java.math.BigDecimal;
 
-public record productPurchaseResponse(
+public record ProductPurchaseResponse(
     Integer productId,
     String name,
     String description,

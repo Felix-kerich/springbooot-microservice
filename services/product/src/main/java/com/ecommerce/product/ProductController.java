@@ -29,9 +29,9 @@ public ResponseEntity<Integer> createProduct(
    return ResponseEntity.ok(service.createProduct(request));
 }
 
-@PostMapping("purchase")
-public ResponseEntity<List<productPurchaseResponse>> purchaseProducts(
-    @RequestBody List<ProductPurchseRequest> requests
+@PostMapping("/purchase")
+public ResponseEntity<List<ProductPurchaseResponse>> purchaseProducts(
+    @RequestBody List<ProductPurchaseRequest> requests
      ) {
    
     return ResponseEntity.ok(service.purchaseProducts(requests));

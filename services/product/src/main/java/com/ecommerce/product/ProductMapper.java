@@ -39,9 +39,9 @@ public class ProductMapper {
         );
     }
 
-    public productPurchaseResponse toProductPurchseResponse(Product product,
+    public ProductPurchaseResponse toProductPurchseResponse(Product product,
             @NotNull(message = "Quantitty is mandatory") double quantity) {
-       return new productPurchaseResponse(
+       return new ProductPurchaseResponse(
         product.getId(),
         product.getName(),
         product.getDescription(),

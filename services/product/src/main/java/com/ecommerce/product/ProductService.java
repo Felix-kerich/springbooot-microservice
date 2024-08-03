@@ -24,10 +24,10 @@ public class ProductService {
         return repository.save(product).getId();
     }
 
-    public List<productPurchaseResponse> purchaseProducts(List<ProductPurchseRequest> request) {
+    public List<ProductPurchaseResponse> purchaseProducts(List<ProductPurchaseRequest> request) {
         var productIds = request
                   .stream()
-                  .map( ProductPurchseRequest::productId)
+                  .map( ProductPurchaseRequest::productId)
                   .toList();
 
         var storedProducts = repository.findAllByIdInOrderById(productIds);  
@@ -37,9 +37,9 @@ public class ProductService {
         } 
         var storedRequest = request
                    .stream()
-                   .sorted(Comparator.comparing(ProductPurchseRequest::productId))   
+                   .sorted(Comparator.comparing(ProductPurchaseRequest::productId))   
                    .toList();
-        var purchasedProducts = new ArrayList<productPurchaseResponse>();  
+        var purchasedProducts = new ArrayList<ProductPurchaseResponse>();  
         for(int i = 0; i < storedProducts.size(); i++)  {
             var product = storedProducts.get(i);
             var productRequest = storedRequest.get(i);
