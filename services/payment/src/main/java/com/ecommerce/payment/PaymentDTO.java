@@ -14,11 +14,17 @@ import lombok.ToString;
 public class PaymentDTO {
    
     private Long id;
+    private String merchantRequestId;
+    private String checkoutRequestId;
+    private String mpesaReceiptNumber;
     private Long phoneNumber;
     private String username;
     private double amount;
     private String product;  
     private Long productId;
+    private int resultCode;
+    private String transactionCode;
+    private String status;
 
 
 
